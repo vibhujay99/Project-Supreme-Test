@@ -26,6 +26,10 @@ app.use('/temps', tempRoutes);
 app.use('/panels', panelRoutes);
 app.use('/customers', customerRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Hello to Admin API')
+});
+
 //const CONNECTION_URL = 'mongodb+srv://vibhujay99:codelyoko99@cluster0.zibrl.mongodb.net/Cluster0?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000;
 
